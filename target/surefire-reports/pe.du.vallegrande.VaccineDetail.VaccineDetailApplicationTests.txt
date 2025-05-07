@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: pe.du.vallegrande.VaccineDetail.VaccineDetailApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.919 s -- in pe.du.vallegrande.VaccineDetail.VaccineDetailApplicationTests

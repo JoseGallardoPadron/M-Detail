@@ -1,0 +1,5 @@
+pe/du/vallegrande/VaccineDetail/model/VaccineDetailModel.class
+pe/du/vallegrande/VaccineDetail/repository/VaccineDetailRepository.class
+pe/du/vallegrande/VaccineDetail/VaccineDetailApplication.class
+pe/du/vallegrande/VaccineDetail/controller/VaccineDetailController.class
+pe/du/vallegrande/VaccineDetail/service/VaccineDetailServices.class

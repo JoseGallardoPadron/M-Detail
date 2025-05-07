@@ -1,0 +1,13 @@
+server:
+  port: 8086
+
+spring:
+  application:
+    name: VaccineDetail
+
+  r2dbc:
+    url: r2dbc:postgresql://aws-0-us-west-1.pooler.supabase.com:5432/postgres
+    username: postgres.czvijwwwsheijovdvwci
+    password: cXZzyYANPji9OE8v
+
+
