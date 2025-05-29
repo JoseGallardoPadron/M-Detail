@@ -1,4 +1,5 @@
 /workspace/ms-vaccinedetail/src/main/java/pe/du/vallegrande/VaccineDetail/VaccineDetailApplication.java
+/workspace/ms-vaccinedetail/src/main/java/pe/du/vallegrande/VaccineDetail/config/CorsConfig.java
 /workspace/ms-vaccinedetail/src/main/java/pe/du/vallegrande/VaccineDetail/controller/VaccineDetailController.java
 /workspace/ms-vaccinedetail/src/main/java/pe/du/vallegrande/VaccineDetail/model/VaccineDetailModel.java
 /workspace/ms-vaccinedetail/src/main/java/pe/du/vallegrande/VaccineDetail/repository/VaccineDetailRepository.java

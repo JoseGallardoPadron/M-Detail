@@ -1,4 +1,6 @@
 pe/du/vallegrande/VaccineDetail/model/VaccineDetailModel.class
+pe/edu/vallegrande/Vaccine/config/CorsConfig$1.class
+pe/edu/vallegrande/Vaccine/config/CorsConfig.class
 pe/du/vallegrande/VaccineDetail/repository/VaccineDetailRepository.class
 pe/du/vallegrande/VaccineDetail/VaccineDetailApplication.class
 pe/du/vallegrande/VaccineDetail/controller/VaccineDetailController.class

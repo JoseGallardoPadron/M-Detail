@@ -42,14 +42,27 @@ private VaccineDetailRepository vaccineDetailRepository;
                 .defaultIfEmpty(ResponseEntity.notFound().build());
     }
 
-    // Actualizar un detalle de vacuna
-    @PutMapping("/{id}")
-    public Mono<ResponseEntity<VaccineDetailModel>> updateVaccineDetail(@PathVariable Long id, @RequestBody VaccineDetailModel vaccineDetail) {
-        vaccineDetail.setVaccineDetailId(id); // Asegúrate de que el ID sea el correcto
-        return vaccineDetailRepository.save(vaccineDetail)
-                .map(updatedDetail -> ResponseEntity.ok(updatedDetail))
-                .defaultIfEmpty(ResponseEntity.notFound().build());
-    }
+// Actualizar un detalle de vacuna
+@PutMapping("/{id}")
+public Mono<ResponseEntity<VaccineDetailModel>> updateVaccineDetail(@PathVariable Long id, @RequestBody VaccineDetailModel vaccineDetail) {
+    return vaccineDetailRepository.findById(id)
+            .flatMap(existingDetail -> {
+                // Actualiza los campos necesarios
+                existingDetail.setVaccineId(vaccineDetail.getVaccineId());
+                existingDetail.setAmountMl(vaccineDetail.getAmountMl());
+                existingDetail.setDoseAmount(vaccineDetail.getDoseAmount());
+                existingDetail.setPrice(vaccineDetail.getPrice());
+                existingDetail.setManufacturingDate(vaccineDetail.getManufacturingDate());
+                existingDetail.setExpirationDate(vaccineDetail.getExpirationDate());
+                existingDetail.setStock(vaccineDetail.getStock());
+
+                return vaccineDetailRepository.save(existingDetail);
+            })
+            .map(updatedDetail -> ResponseEntity.ok(updatedDetail))
+            .defaultIfEmpty(ResponseEntity.notFound().build()); // Devuelve 404 si no se encuentra
+}
+
+
 
     // Eliminar (inactivar) un detalle de vacuna
     @DeleteMapping("/{id}")

@@ -1,1 +1,3 @@
 /workspace/ms-vaccinedetail/src/test/java/pe/du/vallegrande/VaccineDetail/VaccineDetailApplicationTests.java
+/workspace/ms-vaccinedetail/src/test/java/pe/du/vallegrande/VaccineDetail/controller/VaccineDetailControllerTest.java
+/workspace/ms-vaccinedetail/src/test/java/pe/du/vallegrande/VaccineDetail/service/VaccineDetailServicesTest.java

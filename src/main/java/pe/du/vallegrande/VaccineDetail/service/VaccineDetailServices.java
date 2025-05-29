@@ -26,11 +26,14 @@ public class VaccineDetailServices {
         return vaccineDetailRepository.findById(id);
     }
 
-    // Actualizar un detalle de vacuna
-    public Mono<VaccineDetailModel> updateVaccineDetail(Long id, VaccineDetailModel vaccineDetail) {
-        vaccineDetail.setVaccineDetailId(id); // Asegúrate de que el ID sea el correcto
-        return vaccineDetailRepository.save(vaccineDetail);
-    }
+   public Mono<VaccineDetailModel> updateVaccineDetail(Long id, VaccineDetailModel vaccineDetail) {
+    return vaccineDetailRepository.findById(id)
+        .flatMap(existingDetail -> {
+            vaccineDetail.setVaccineDetailId(id); // Asegúrate de que el ID sea el correcto
+            return vaccineDetailRepository.save(vaccineDetail);
+        });
+}
+
 
     // Eliminar un detalle de vacuna
     public Mono<Void> deleteVaccineDetail(Long id) {
